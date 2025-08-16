@@ -1,0 +1,12 @@
+# Web framework and server
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+
+# File watching for real-time updates
+watchdog==5.0.3
+
+# WebSocket support (included with uvicorn[standard])
+websockets==13.1
+
+# For async support in FastAPI
+python-multipart==0.0.12
