@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenRouter Request Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Include marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>🔍 OpenRouter Request Dashboard</h1>
+        <span class="status">
+            <span class="status-dot" id="statusDot"></span>
+            <span id="statusText">Connecting...</span>
+        </span>
+    </header>
+
+    <div class="container">
+        <div class="timestamp" id="timestamp"></div>
+        
+        <div class="controls">
+            <div class="nav-controls">
+                <button class="nav-button" id="nextButton" title="Next request">◀</button>
+                <span class="nav-info" id="navInfo">0 / 0</span>
+                <button class="nav-button" id="prevButton" title="Previous request">▶</button>
+            </div>
+            <button class="toggle-button" id="viewToggle">Show Raw JSON</button>
+        </div>
+        
+        <div class="content">
+            <div class="panel">
+                <div class="panel-content">
+                    <div id="allContent" class="chat-viewer">
+                        <div class="empty-state">
+                            <div class="icon">📬</div>
+                            <p>Waiting for requests...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/static/js/dashboard.js"></script>
+</body>
+</html>
